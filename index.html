@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DIMLY - Dimsum Sehat & Modern</title>
   <style>
-    body {margin:0; font-family:'Helvetica Neue', sans-serif; color:#333; scroll-behavior:smooth;}
-    nav {position:fixed; top:0; left:0; right:0; background:#fff; box-shadow:0 2px 4px rgba(0,0,0,0.1); z-index:999; display:flex; justify-content:center; gap:30px; padding:20px;}
-    nav a {color:#333; text-decoration:none; font-weight:bold;}
-    header {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:#fdf3e7 url('texture.png') repeat; background-size:cover;}
-    header img {width:150px; margin-bottom:20px;}
+    body {margin:0; font-family:'Helvetica Neue', sans-serif; scroll-behavior:smooth; background:#fdf3e7; color:#333;}
+    nav {position:fixed; top:0; left:0; right:0; display:flex; justify-content:space-around; align-items:center; padding:10px 20px; background:#fdf3e7 url('texture.png') repeat; background-size:150px; z-index:999; box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+    nav a {color:#8b0000; text-decoration:none; font-weight:bold; font-size:16px; padding:10px;}
+    nav img {height:60px;}
+    header {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:#fdf3e7;}
+    header img.hero-img {width:220px; margin-bottom:20px;}
     header h1 {font-size:48px; margin:0; font-weight:bold; color:#8b0000;}
     header p {font-size:24px; margin-top:10px; font-style:italic; color:#8b0000;}
     .btn-order {display:inline-block; margin-top:30px; padding:15px 30px; background:#8b0000; color:#fff; font-weight:bold; border-radius:8px; text-decoration:none;}
@@ -22,12 +23,11 @@
     .item h3 {margin:20px 0 10px; font-size:20px;}
     .item p.price {font-weight:bold; color:#8b0000;}
     .item p.desc {font-size:16px; color:#555;}
-    footer {background:#8b0000; color:#fff; padding:60px 20px 20px; margin-top:80px; text-align:center;}
+    footer {background:#8b0000; color:#fff; margin-top:80px; text-align:center; padding:60px 20px 30px; position:relative;}
+    footer::before {content:""; position:absolute; top:-80px; left:0; right:0; height:80px; background:url('texture.png') repeat-x; background-size:150px; transform:rotate(180deg);}
     footer h3 {font-size:28px; margin-bottom:20px; color:#ffeb3b;}
     footer p {font-size:18px; margin:10px 0;}
     .wa-btn {display:inline-block; margin-top:20px; padding:12px 25px; background:#fff; color:#8b0000; font-weight:bold; border-radius:30px; text-decoration:none;}
-    footer .social-icons {margin-top:30px;}
-    footer .social-icons a {margin:0 10px; color:#fff; font-size:24px; text-decoration:none;}
     footer small {display:block; margin-top:40px; font-size:14px; color:#ddd;}
   </style>
 </head>
@@ -36,12 +36,13 @@
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
+    <img src="logo-dimly.png" alt="DIMLY Logo"/>
     <a href="#menu">Menu</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <header id="home">
-    <img src="logo-dimly.png" alt="Logo DIMLY" />
+    <img class="hero-img" src="logo-dimly.png" alt="Logo DIMLY" />
     <h1>DIMLY</h1>
     <p>Setiap Gigitan, Ledakan Kenikmatan</p>
     <a class="btn-order" href="https://wa.me/6281394316155">Order Sekarang</a>
@@ -80,9 +81,6 @@
     <h3>#1 Dimsum Modern Sehat & Lezat</h3>
     <p>Info Pemesanan:</p>
     <a class="wa-btn" href="https://wa.me/6281394316155">081394316155 (WhatsApp)</a>
-    <div class="social-icons">
-      <a href="https://instagram.com/dimly_dimsum">📸</a>
-    </div>
     <p>Lokasi: Binong, Subang</p>
     <small>&copy; 2025 DIMLY. All rights reserved.</small>
   </footer>
